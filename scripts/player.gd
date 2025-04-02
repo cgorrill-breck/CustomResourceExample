@@ -7,7 +7,8 @@ const JUMP_VELOCITY = -400.0
 var is_attacking = false  # Prevents attack spamming
 var facing_right = true  # Tracks which direction the player is facing
 @onready var hit_box: HitBox = $HitBox
-@export var damage = 10
+
+@export var player_stats : Stats
 
 func _ready():
 	attack_sprite.visible = false  # Hide the attack sprite initially
@@ -63,4 +64,4 @@ func _on_hurt_box_hurt(hitbox: HitBox, damage: int) -> void:
 	pass  # Replace with function body.
 
 func set_damage():
-	hit_box.damage = damage
+	hit_box.damage = player_stats.get_damage()

@@ -1,10 +1,20 @@
-[gd_scene load_steps=13 format=3 uid="uid://uf1ks4o1ax3p"]
+[gd_scene load_steps=15 format=3 uid="uid://uf1ks4o1ax3p"]
 
 [ext_resource type="Texture2D" uid="uid://dtj7sf261aji2" path="res://assets/circle.png" id="1_16wro"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_qycgj"]
+[ext_resource type="Script" path="res://resources/stats.gd" id="2_5qwwf"]
 [ext_resource type="PackedScene" uid="uid://r62cyd5nr1yf" path="res://scenes/hit_box.tscn" id="3_2gk32"]
 [ext_resource type="PackedScene" uid="uid://b8y0dedqjcw8b" path="res://scenes/hurt_box.tscn" id="3_k8lab"]
 [ext_resource type="Texture2D" uid="uid://d2bqwt1iemt8d" path="res://assets/attack_anim.png" id="5_6osoh"]
+
+[sub_resource type="Resource" id="Resource_5j4ff"]
+resource_local_to_scene = true
+script = ExtResource("2_5qwwf")
+_health = 25
+_damage = 1
+_defense = 35
+_speed_factor = 1.0
+_jump_factor = 1.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0t3fm"]
 radius = 16.0312
@@ -217,6 +227,7 @@ _data = {
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_qycgj")
+player_stats = SubResource("Resource_5j4ff")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_0t3fm")

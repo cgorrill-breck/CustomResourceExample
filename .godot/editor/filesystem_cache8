@@ -1,0 +1,17 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1743623028
+icon.svg::CompressedTexture2D::3976597645749286733::1743449214::1743622729::1::::<><>::
+::res://assets/::1743622729
+attack_anim.png::CompressedTexture2D::9057437004888299473::1743513017::1743622729::1::::<><>::
+circle.png::CompressedTexture2D::8513404873816994959::1743451033::1743622729::1::::<><>::
+::res://scenes/::1743623030
+enemy.gd::GDScript::-1::1743621231::0::1::::<>CharacterBody2D<>::
+enemy.tscn::PackedScene::2499987982526276250::1743621379::0::1::::<><>::uid://dtj7sf261aji2::::res://assets/circle.png<>res://scenes/enemy.gd<>uid://r62cyd5nr1yf::::res://scenes/hit_box.tscn<>uid://b8y0dedqjcw8b::::res://scenes/hurt_box.tscn
+hit_box.tscn::PackedScene::1258850249190858741::1743621379::0::1::::<><>::res://scripts/hit_box.gd
+hurt_box.tscn::PackedScene::4753721087513393435::1743621379::0::1::::<><>::res://scripts/hurt_box.gd
+player.tscn::PackedScene::1415696252172422467::1743621379::0::1::::<><>::uid://dtj7sf261aji2::::res://assets/circle.png<>res://scripts/player.gd<>uid://r62cyd5nr1yf::::res://scenes/hit_box.tscn<>uid://b8y0dedqjcw8b::::res://scenes/hurt_box.tscn<>uid://d2bqwt1iemt8d::::res://assets/attack_anim.png
+world.tscn::PackedScene::7943713325663044349::1743623030::0::1::::<><>::uid://uf1ks4o1ax3p::::res://scenes/player.tscn<>uid://bbvao370qkl1k::::res://scenes/enemy.tscn
+::res://scripts/::1743621379
+hit_box.gd::GDScript::-1::1743621084::0::1::::HitBox<>Area2D<>::
+hurt_box.gd::GDScript::-1::1743621096::0::1::::HurtBox<>Area2D<>::
+player.gd::GDScript::-1::1743621379::0::1::::<>CharacterBody2D<>::

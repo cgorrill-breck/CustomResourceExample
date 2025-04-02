@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="CustomResourceLesson1"
+config/name="CustomResourceExample"
 run/main_scene="res://scenes/world.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"

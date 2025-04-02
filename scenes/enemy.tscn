@@ -1,9 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://bbvao370qkl1k"]
+[gd_scene load_steps=10 format=3 uid="uid://bbvao370qkl1k"]
 
 [ext_resource type="Texture2D" uid="uid://dtj7sf261aji2" path="res://assets/circle.png" id="1_8nadd"]
 [ext_resource type="Script" path="res://scenes/enemy.gd" id="1_yu4a4"]
 [ext_resource type="PackedScene" uid="uid://r62cyd5nr1yf" path="res://scenes/hit_box.tscn" id="2_hxdha"]
+[ext_resource type="Script" path="res://resources/stats.gd" id="2_inqmy"]
 [ext_resource type="PackedScene" uid="uid://b8y0dedqjcw8b" path="res://scenes/hurt_box.tscn" id="3_x2xy3"]
+
+[sub_resource type="Resource" id="Resource_5qh6a"]
+resource_local_to_scene = true
+script = ExtResource("2_inqmy")
+_health = 5
+_damage = 5
+_defense = 35
+_speed_factor = 1.0
+_jump_factor = 1.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qreq6"]
 radius = 16.1245
@@ -18,6 +28,7 @@ radius = 16.0
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_yu4a4")
+enemy_stats = SubResource("Resource_5qh6a")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 self_modulate = Color(0.920181, 0, 0.124977, 1)
