@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlf82el8jsg4l"]
+
+[ext_resource type="PackedScene" uid="uid://uf1ks4o1ax3p" path="res://scenes/player.tscn" id="1_5vcup"]
+[ext_resource type="PackedScene" uid="uid://bbvao370qkl1k" path="res://scenes/enemy.tscn" id="2_kothr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ryvum"]
+size = Vector2(481, 18)
+
+[node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_5vcup")]
+position = Vector2(250, 116)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(240.5, 262)
+shape = SubResource("RectangleShape2D_ryvum")
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D"]
+color = Color(5.53504e-07, 0.317354, 0.317502, 1)
+polygon = PackedVector2Array(1, 253, 1, 270, 481, 270, 482, 252)
+
+[node name="Enemy" parent="." instance=ExtResource("2_kothr")]
+position = Vector2(436, 228)
